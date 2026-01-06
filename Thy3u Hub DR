@@ -1,1 +1,407 @@
-do local v0=loadstring(game:HttpGet("https://raw.nebulasoftworks.xyz/luna",true))();local v1=v0:CreateWindow({Name="THY3U HUB | Deceit Retreat",Subtitle=nil,LogoID="82795327169782",LoadingEnabled=true,LoadingTitle="Loading Thy3u..",LoadingSubtitle="by TylerTenOne",ConfigSettings={RootFolder=nil,ConfigFolder="Big Hub"},KeySystem=false,KeySettings={Title="Luna Example Key",Subtitle="Key System",Note="Best Key System Ever! Also, Please Use A HWID Keysystem like Pelican, Luarmor etc. that provide key strings based on your HWID since putting a simple string is very easy to bypass",SaveInRoot=false,SaveKey=true,Key={"Example Key"},SecondAction={Enabled=true,Type="Link",Parameter=""}}});v1:CreateHomeTab({SupportedExecutors={},DiscordInvite="1234",Icon=1});local v2=v1:CreateTab({Name="Main",Icon="star",ImageSource="Material",ShowTitle=true});local v3=v1:CreateTab({Name="Settings",Icon="settings",ImageSource="Material",ShowTitle=true});v2:CreateSection("Main");local v4=v2:CreateButton({Name="AutoWin",Description="AutoWins",Callback=function() for v24,v25 in pairs(game.Workspace.Assets:GetDescendants()) do if (v25:IsA("Part") and v25:FindFirstChild("TouchInterest")) then firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,v25,0);end end end});local v4=v2:CreateButton({Name="Win Wolf Game!",Description="Wins the wolf redlight greenlight!",Callback=function() for v26,v27 in pairs(game.Workspace.Assets:GetDescendants()) do if (v27:IsA("Part") and v27:FindFirstChild("TouchInterest")) then firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,v27,0);end end end});local v4=v2:CreateButton({Name="Win Row, Row, Row",Description="Wins the row row row boat game.",Callback=function() for v28,v29 in pairs(game.Workspace.Assets:GetDescendants()) do if v29:IsA("ProximityPrompt") then for v68=1,500 do fireproximityprompt(v29);end end end end});local v4=v2:CreateButton({Name="Win Smores",Description="Wins the smores game",Callback=function() for v30,v31 in pairs(game.Workspace.Assets:GetDescendants()) do if v31:IsA("ProximityPrompt") then for v69=1,500 do fireproximityprompt(v31);end end end end});local v5=v2:CreateToggle({Name="Collect Emeralds, Rubies and Diamonds",Description="Collects all of them",CurrentValue=false,Callback=function(v9) local v10=state;while v10 do task.wait(0.05);for v62,v63 in pairs(workspace:GetDescendants()) do if ((v63.Name=="Emerald") or (v63.Name=="Ruby") or (v63.Name=="Diamond")) then v63.Transparency=1;v63.CanCollide=false;v63.Position=game.Players.LocalPlayer.Character.Torso.Position;end end if  not state then break;end end end},"Toggle");v2:CreateDivider();v2:CreateSection("Other Challenges!");local v4=v2:CreateButton({Name="Win Pot And Keys.",Description="Wins the pot and keys challenge",Callback=function() local v11=workspace:FindFirstChild("Key",true);if (v11 and v11:FindFirstChild("TouchInterest")) then firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart"),v11,0);firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart"),v11,1);end wait(0.1);for v32,v33 in pairs(workspace:GetDescendants()) do if v33:IsA("Model") then for v74,v75 in pairs(v33:GetDescendants()) do if v75:IsA("ProximityPrompt") then fireproximityprompt(v75);end end end end end});local v4=v2:CreateButton({Name="Win BreakFast Buffet",Description="Wins the breakfast buffet game",Callback=function() for v34,v35 in pairs(game.Workspace.Assets:GetDescendants()) do if v35:IsA("ProximityPrompt") then for v76=1,500 do fireproximityprompt(v35);end end end end});local v4=v2:CreateButton({Name="Construct Burger",Description="Constructs Ur burger..!.",Callback=function() for v36,v37 in pairs(game.Workspace.Assets:GetDescendants()) do if v37:IsA("ProximityPrompt") then for v77=1,500 do fireproximityprompt(v37);end end end end});local v4=v2:CreateButton({Name="Instant Eat Beans",Description="Instant eats it",Callback=function() for v38,v39 in pairs(game.Workspace.Assets:GetDescendants()) do if v39:IsA("ProximityPrompt") then for v78=1,500 do fireproximityprompt(v39);end end end end});local v4=v2:CreateButton({Name="Remove Disasters",Description="Removes the disasters from under the weather",Callback=function() for v40,v41 in pairs(workspace:GetDescendants()) do if ((v41.Name=="Erosion") or (v41.Name=="Quicksand") or (v41.Name=="Hitbox") or (v41.Name=="Lightning")) then v41:Destroy();end end end});local v4=v2:CreateButton({Name="Kill Everybody With Pummel Stick",Description="Only in pond challenge.",Callback=function() local v12=game:GetService("Players");local v13=game:GetService("RunService");local v14=v12.LocalPlayer;local v15=v14.Backpack:FindFirstChild("Sword");local function v16(v42) return v42:FindFirstChild("Torso");end local function v17(v43) if ( not v43.Character or  not v16(v43.Character)) then return;end local v44=v43.Character;local v45=v16(v44);local v46=v14.Character or v14.CharacterAdded:Wait() ;local v47=v46:FindFirstChildOfClass("Humanoid");local v48=v46:FindFirstChild("HumanoidRootPart");if ( not v47 or  not v48) then return;end v47.Sit=true;local v50;v50=v13.Heartbeat:Connect(function() if (v12:FindFirstChild(v43.Name) and (v44~=nil) and v45 and v48 and (v47.Sit==true)) then v48.CFrame=v45.CFrame * CFrame.new( -1.75, -1,4.25) ;if (v15 and v15:FindFirstChild("RemoteClick")) then local v83=v15.RemoteClick;if v83 then v83:FireServer();end end else v50:Disconnect();end end);local v51=v44:FindFirstChild("Humanoid");while v51 and (v51.Health>0)  do wait(0.1);end if v50 then v50:Disconnect();end end local function v18() for v64,v65 in ipairs(v12:GetPlayers()) do if (v65~=v14) then v17(v65);end end end v18();end});local v4=v2:CreateButton({Name="Remove Shark",Description="Removes it",Callback=function() for v52,v53 in pairs(workspace.Assets:GetDescendants()) do if (v53.Name=="Shark") then v53:Destroy();end end end});local v4=v2:CreateButton({Name="Instant Eat Bowl",Description="Works In Re-Treat",Callback=function() for v54,v55 in pairs(game.Workspace.Assets:GetDescendants()) do if v55:IsA("ProximityPrompt") then for v80=1,500 do fireproximityprompt(v55);end end end end});local v4=v2:CreateButton({Name="Win Puzzle",Description="In the puzzle game.",Callback=function() for v56,v57 in pairs(game.Workspace.Assets:GetDescendants()) do if v57:FindFirstChildOfClass("ClickDetector") then for v81=1,150 do fireclickdetector(v57:FindFirstChildOfClass("ClickDetector"));end end end end});local v4=v3:CreateButton({Name="Fire ProximityPrompt",Description="Only for clickable challenges, such as Breakfast Buffet.",Callback=function() for v58,v59 in pairs(game.Workspace.Assets:GetDescendants()) do if v59:IsA("ProximityPrompt") then for v82=1,1200 do fireproximityprompt(v59);end end end end});local v6=v3:CreateColorPicker({Name="Color Picker..!",Color=Color3.fromRGB(86,171,128),Flag="ColorPicker1",Callback=function(v19) end},"ColorPicker");v3:CreateDivider();v3:CreateSection("Misc");local v4=v3:CreateButton({Name="Show Usernames on top!",Description="Shows usernames on top.",Callback=function() for v60,v61 in pairs(game.Workspace:GetDescendants()) do if (v61.ClassName=="TextLabel") then local v66=v61.Text;task.wait();v61.Text=v61.Text   .. " ("   .. v61.Parent.Parent.Parent.Parent.Name   .. ")" ;end end end});local v4=v3:CreateButton({Name="Infinite Yield!",Description="Loads infiniteyield",Callback=function() loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source",true))();end});local v4=v3:CreateButton({Name="Shaders",Description="Shaders aka makes it a bit high quality",Callback=function() loadstring(game:HttpGet("https://pastebin.com/raw/uqD7VqQU",true))();end});local v7=v3:CreateSlider({Name="Walkspeed",Range={0,200},Increment=5,CurrentValue=16,Callback=function(v20) game.Players.localPlayer.Character.Humanoid.WalkSpeed=v20;end},"Slider");local v7=v3:CreateSlider({Name="Jump Power",Range={0,200},Increment=5,CurrentValue=46,Callback=function(v22) game.Players.localPlayer.Character.Humanoid.JumpPower=v22;end},"Slider");v3:CreateDivider();v3:CreateSection("Credits");local v8=v3:CreateLabel({Text="Made by me..?  Credits to: Me",Style=2}); end
+local Luna = loadstring(game:HttpGet("https://raw.nebulasoftworks.xyz/luna", true))()
+
+
+local Window = Luna:CreateWindow({
+    Name = "THY3U HUB | Deceit Retreat", -- This Is Title Of Your Window
+    Subtitle = nil, -- A Gray Subtitle next To the main title.
+    LogoID = "82795327169782", -- The Asset ID of your logo. Set to nil if you do not have a logo for Luna to use.
+    LoadingEnabled = true, -- Whether to enable the loading animation. Set to false if you do not want the loading screen or have your own custom one.
+    LoadingTitle = "Loading Thy3u..", -- Header for loading screen
+    LoadingSubtitle = "by TylerTenOne", -- Subtitle for loading screen
+
+    ConfigSettings = {
+        RootFolder = nil, -- The Root Folder Is Only If You Have A Hub With Multiple Game Scripts and u may remove it. DO NOT ADD A SLASH
+        ConfigFolder = "Big Hub" -- The Name Of The Folder Where Luna Will Store Configs For This Script. DO NOT ADD A SLASH
+    },
+
+    KeySystem = false, -- As Of Beta 6, Luna Has officially Implemented A Key System!
+    KeySettings = {
+        Title = "Luna Example Key",
+        Subtitle = "Key System",
+        Note = "Best Key System Ever! Also, Please Use A HWID Keysystem like Pelican, Luarmor etc. that provide key strings based on your HWID since putting a simple string is very easy to bypass",
+        SaveInRoot = false, -- Enabling will save the key in your RootFolder (YOU MUST HAVE ONE BEFORE ENABLING THIS OPTION)
+        SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+        Key = {"Example Key"}, -- List of keys that will be accepted by the system, please use a system like Pelican or Luarmor that provide key strings based on your HWID since putting a simple string is very easy to bypass
+        SecondAction = {
+            Enabled = true, -- Set to false if you do not want a second action,
+            Type = "Link", -- Link / Discord.
+            Parameter = "" -- If Type is Discord, then put your invite link (DO NOT PUT DISCORD.GG/). Else, put the full link of your key system here.
+        }
+    }
+})
+
+Window:CreateHomeTab({
+    SupportedExecutors = {}, -- A Table Of Executors Your Script Supports. Add strings of the executor names for each executor.
+    DiscordInvite = "1234", -- The Discord Invite Link. Do Not Include discord.gg/ | Only Include the code.
+    Icon = 1, -- By Default, The Icon Is The Home Icon. If You would like to change it to dashboard, replace the interger with 2
+})
+
+local MainTab = Window:CreateTab({
+    Name = "Main",
+    Icon = "star",
+    ImageSource = "Material",
+    ShowTitle = true -- This will determine whether the big header text in the tab will show
+})
+
+local SettingsTab = Window:CreateTab({
+    Name = "Settings",
+    Icon = "settings",
+    ImageSource = "Material",
+    ShowTitle = true -- This will determine whether the big header text in the tab will show
+})
+
+MainTab:CreateSection("Main")
+
+local Button = MainTab:CreateButton({
+    Name = "AutoWin",
+    Description = "AutoWins", -- Creates A Description For Users to know what the button does (looks bad if you use it all the time),
+    Callback = function()
+        for i,v in pairs(game.Workspace.Assets:GetDescendants()) do
+    if v:IsA("Part") and v:FindFirstChild("TouchInterest") then
+        firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v, 0)
+    end
+end
+    end
+})
+
+local Button = MainTab:CreateButton({
+    Name = "Win Wolf Game!",
+    Description = "Wins the wolf redlight greenlight!", -- Creates A Description For Users to know what the button does (looks bad if you use it all the time),
+    Callback = function()
+        for i,v in pairs(game.Workspace.Assets:GetDescendants()) do
+    if v:IsA("Part") and v:FindFirstChild("TouchInterest") then
+        firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v, 0)
+    end
+end
+    end
+})
+
+local Button = MainTab:CreateButton({
+    Name = "Win Row, Row, Row",
+    Description = "Wins the row row row boat game.", -- Creates A Description For Users to know what the button does (looks bad if you use it all the time),
+    Callback = function()
+        for _,v in pairs(game.Workspace.Assets:GetDescendants()) do
+    if v:IsA("ProximityPrompt") then
+        for i = 1, 500 do
+            fireproximityprompt(v)
+        end
+    end
+end
+    end
+})
+
+local Button = MainTab:CreateButton({
+    Name = "Win Smores",
+    Description = "Wins the smores game", -- Creates A Description For Users to know what the button does (looks bad if you use it all the time),
+    Callback = function()
+        for _,v in pairs(game.Workspace.Assets:GetDescendants()) do
+    if v:IsA("ProximityPrompt") then
+        for i = 1, 500 do
+            fireproximityprompt(v)
+        end
+    end
+end
+    end
+})
+
+local Toggle = MainTab:CreateToggle({
+    Name = "Collect Emeralds, Rubies and Diamonds",
+    Description = "Collects all of them",
+    CurrentValue = false,
+    Callback = function(Value)
+        local collecting = state
+
+while collecting do
+    task.wait(0.05)
+    
+    for i, v in pairs(workspace:GetDescendants()) do
+        if v.Name == "Emerald" or v.Name == "Ruby" or v.Name == "Diamond" then
+            v.Transparency = 1
+            v.CanCollide = false
+            v.Position = game.Players.LocalPlayer.Character.Torso.Position
+        end
+    end
+    
+    if not state then 
+        break 
+    end
+end
+    end
+}, "Toggle") -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+
+MainTab:CreateDivider()
+
+MainTab:CreateSection("Other Challenges!")
+
+local Button = MainTab:CreateButton({
+    Name = "Win Pot And Keys.",
+    Description = "Wins the pot and keys challenge", -- Creates A Description For Users to know what the button does (looks bad if you use it all the time),
+    Callback = function()
+       local key = workspace:FindFirstChild("Key", true)
+if key and key:FindFirstChild("TouchInterest") then
+    firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart"), key, 0)
+    firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart"), key, 1)
+end
+
+wait(0.1)
+
+for _, model in pairs(workspace:GetDescendants()) do
+    if model:IsA("Model") then
+        for _, obj in pairs(model:GetDescendants()) do
+            if obj:IsA("ProximityPrompt") then
+                fireproximityprompt(obj)
+            end
+        end
+    end
+end
+    end
+})
+
+local Button = MainTab:CreateButton({
+    Name = "Win BreakFast Buffet",
+    Description = "Wins the breakfast buffet game", -- Creates A Description For Users to know what the button does (looks bad if you use it all the time),
+    Callback = function()
+        for _,v in pairs(game.Workspace.Assets:GetDescendants()) do
+    if v:IsA("ProximityPrompt") then
+        for i = 1, 500 do
+            fireproximityprompt(v)
+        end
+    end
+end
+    end
+})
+
+local Button = MainTab:CreateButton({
+    Name = "Construct Burger",
+    Description = "Constructs Ur burger..!.", -- Creates A Description For Users to know what the button does (looks bad if you use it all the time),
+    Callback = function()
+        for _,v in pairs(game.Workspace.Assets:GetDescendants()) do
+    if v:IsA("ProximityPrompt") then
+        for i = 1, 500 do
+            fireproximityprompt(v)
+        end
+    end
+end
+    end
+})
+
+local Button = MainTab:CreateButton({
+    Name = "Instant Eat Beans",
+    Description = "Instant eats it", -- Creates A Description For Users to know what the button does (looks bad if you use it all the time),
+    Callback = function()
+        for _,v in pairs(game.Workspace.Assets:GetDescendants()) do
+    if v:IsA("ProximityPrompt") then
+        for i = 1, 500 do
+            fireproximityprompt(v)
+        end
+    end
+end
+    end
+})
+
+local Button = MainTab:CreateButton({
+    Name = "Remove Disasters",
+    Description = "Removes the disasters from under the weather", -- Creates A Description For Users to know what the button does (looks bad if you use it all the time),
+    Callback = function()
+        for i,v in pairs(workspace:GetDescendants()) do
+	if v.Name == "Erosion" or v.Name == "Quicksand" or v.Name == "Hitbox" or v.Name == "Lightning" then
+		v:Destroy()
+	end
+end
+    end
+})
+
+local Button = MainTab:CreateButton({
+    Name = "Kill Everybody With Pummel Stick",
+    Description = "Only in pond challenge.", -- Creates A Description For Users to know what the button does (looks bad if you use it all the time),
+    Callback = function()
+        local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local LocalPlayer = Players.LocalPlayer
+local Sword = LocalPlayer.Backpack:FindFirstChild("Sword")
+
+local function getHead(character)
+    return character:FindFirstChild("Torso")
+end
+
+local function SitBehindHead(targetPlayer)
+    if not targetPlayer.Character or not getHead(targetPlayer.Character) then
+        return
+    end
+
+    local targetCharacter = targetPlayer.Character
+    local targetHead = getHead(targetCharacter)
+    local character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+    local humanoid = character:FindFirstChildOfClass("Humanoid")
+    local root = character:FindFirstChild("HumanoidRootPart")
+
+    if not humanoid or not root then
+        return
+    end
+
+    humanoid.Sit = true
+
+    local headSit
+    headSit = RunService.Heartbeat:Connect(function()
+        if Players:FindFirstChild(targetPlayer.Name) and targetCharacter ~= nil and targetHead and root and humanoid.Sit == true then
+            root.CFrame = targetHead.CFrame * CFrame.new(-1.75, -1, 4.25)
+            if Sword and Sword:FindFirstChild("RemoteClick") then
+                local clickEvent = Sword.RemoteClick
+                if clickEvent then
+                    clickEvent:FireServer()
+                end
+            end
+        else
+            headSit:Disconnect()
+        end
+    end)
+
+    local targetHumanoid = targetCharacter:FindFirstChild("Humanoid")
+    while targetHumanoid and targetHumanoid.Health > 0 do
+        wait(0.1)
+    end
+
+    if headSit then
+        headSit:Disconnect()
+    end
+end
+
+local function SitOnEveryone()
+    for _, player in ipairs(Players:GetPlayers()) do
+        if player ~= LocalPlayer then
+            SitBehindHead(player)
+        end
+    end
+end
+
+SitOnEveryone()
+    end
+})
+
+local Button = MainTab:CreateButton({
+    Name = "Remove Shark",
+    Description = "Removes it", -- Creates A Description For Users to know what the button does (looks bad if you use it all the time),
+    Callback = function()
+       for i, v in pairs(workspace.Assets:GetDescendants()) do
+            if v.Name == "Shark" then
+                v:Destroy()
+            end
+        end
+    end
+})
+
+local Button = MainTab:CreateButton({
+    Name = "Instant Eat Bowl",
+    Description = "Works In Re-Treat", -- Creates A Description For Users to know what the button does (looks bad if you use it all the time),
+    Callback = function()
+        for _,v in pairs(game.Workspace.Assets:GetDescendants()) do
+    if v:IsA("ProximityPrompt") then
+        for i = 1, 500 do
+            fireproximityprompt(v)
+        end
+    end
+end
+    end
+})
+
+local Button = MainTab:CreateButton({
+    Name = "Win Puzzle",
+    Description = "In the puzzle game.", -- Creates A Description For Users to know what the button does (looks bad if you use it all the time),
+    Callback = function()
+        for _,v in pairs(game.Workspace.Assets:GetDescendants()) do
+    if v:FindFirstChildOfClass("ClickDetector") then
+        for i = 1, 150 do
+            fireclickdetector(v:FindFirstChildOfClass("ClickDetector"))
+        end
+    end
+end
+    end
+})
+
+
+local Button = SettingsTab:CreateButton({
+    Name = "Fire ProximityPrompt",
+    Description = "Only for clickable challenges, such as Breakfast Buffet.", -- Creates A Description For Users to know what the button does (looks bad if you use it all the time),
+    Callback = function()
+ for _,v in pairs(game.Workspace.Assets:GetDescendants()) do
+    if v:IsA("ProximityPrompt") then
+        for i = 1, 1200 do
+            fireproximityprompt(v)
+        end
+    end
+end
+    end
+})
+
+local ColorPicker = SettingsTab:CreateColorPicker({
+    Name = "Color Picker..!",
+    Color = Color3.fromRGB(86, 171, 128),
+    Flag = "ColorPicker1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        -- The function that takes place every time the color picker is moved/changed
+        -- The variable (Value) is a Color3fromRGB value based on which color is selected
+    end
+}, "ColorPicker") -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+
+SettingsTab:CreateDivider()
+
+SettingsTab:CreateSection("Misc")
+
+local Button = SettingsTab:CreateButton({
+	Name = "Show Usernames on top!",
+	Description = "Shows usernames on top.", -- Creates A Description For Users to know what the button does (looks bad if you use it all the time),
+    	Callback = function()
+        for i,v in pairs(game.Workspace:GetDescendants()) do
+            if v.ClassName == "TextLabel" then
+                local currenttextright = v.Text
+                task.wait()
+                v.Text = v.Text.. " ("..v.Parent.Parent.Parent.Parent.Name..")"
+            end
+        end
+    	end
+})
+
+local Button = SettingsTab:CreateButton({
+	Name = "Infinite Yield!",
+	Description = "Loads infiniteyield", -- Creates A Description For Users to know what the button does (looks bad if you use it all the time),
+    	Callback = function()
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source", true))()
+    	end
+})
+
+local Button = SettingsTab:CreateButton({
+	Name = "Shaders",
+	Description = "Shaders aka makes it a bit high quality", -- Creates A Description For Users to know what the button does (looks bad if you use it all the time),
+    	Callback = function()
+          loadstring(game:HttpGet(('https://pastebin.com/raw/uqD7VqQU'), true))()
+    	end
+})
+
+local Slider = SettingsTab:CreateSlider({
+	Name = "Walkspeed",
+	Range = {0, 200}, -- The Minimum And Maximum Values Respectively
+	Increment = 5, -- Basically The Changing Value/Rounding Off
+	CurrentValue = 16, -- The Starting Value
+    	Callback = function(Value)
+       	 game.Players.localPlayer.Character.Humanoid.WalkSpeed = (Value)
+    	end
+}, "Slider") -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+
+local Slider = SettingsTab:CreateSlider({
+	Name = "Jump Power",
+	Range = {0, 200}, -- The Minimum And Maximum Values Respectively
+	Increment = 5, -- Basically The Changing Value/Rounding Off
+	CurrentValue = 46, -- The Starting Value
+    	Callback = function(Value)
+       	game.Players.localPlayer.Character.Humanoid.JumpPower = (Value)
+    	end
+}, "Slider") -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+
+SettingsTab:CreateDivider()
+
+SettingsTab:CreateSection("Credits")
+
+local Label = SettingsTab:CreateLabel({
+    Text = "Made by me..?  Credits to: Me",
+    Style = 2 -- Luna Labels Have 3 Styles : A Basic Label, A Green Information Label and A Red Warning Label. Look At The Following Image For More Details
+})
